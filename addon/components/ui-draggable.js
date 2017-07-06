@@ -32,6 +32,9 @@ export default Ember.Component.extend(JqueryUIMethods, {
     let _self = this;
 
     return {
+      create: function(event, ui) {
+	_self.sendAction(`onCreate`, event, ui, _self);
+      },
       start: function(event, ui) {
         _self.sendAction(`onStart`, event, ui, _self);
       },
