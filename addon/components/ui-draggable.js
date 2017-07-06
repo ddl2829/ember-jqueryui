@@ -40,6 +40,9 @@ export default Ember.Component.extend(JqueryUIMethods, {
       },
       stop: function (event, ui) {
         _self.sendAction(`onStop`, event, ui, _self);
+      },
+      drag: function(event, ui) {
+	_self.sendAction(`onDrag`, event, ui, _self);
       }
     };
   }
