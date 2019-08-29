@@ -47,7 +47,7 @@ export default Ember.Component.extend(JqueryUIMethods, {
 			.disableSelection();
 	}),
 
-	destroyDroppable: on('willDestroyElement', () => {
+	destroyDroppable: on('willDestroyElement', function() {
 		this.$().draggable('destroy');
 	}),
 
